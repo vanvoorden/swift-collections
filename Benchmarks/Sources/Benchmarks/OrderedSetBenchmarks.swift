@@ -589,9 +589,10 @@ extension Benchmark {
       return { timer in
         let left = OrderedSet(0 ..< size)[0 ..< size]
         let right = OrderedSet(0 ..< size)[0 ..< size]
-        timer.measure {
-          precondition(left == right)
+        let result = timer.measure {
+          left == right
         }
+        precondition(result)
       }
     }
     
@@ -602,9 +603,10 @@ extension Benchmark {
       return { timer in
         let left = OrderedSet(0 ..< size)[0 ..< size]
         let right = left
-        timer.measure {
-          precondition(left == right)
+        let result = timer.measure {
+          left == right
         }
+        precondition(result)
       }
     }
 

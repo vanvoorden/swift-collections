@@ -20,7 +20,7 @@ let package = Package(
   ],
   dependencies: [
     .package(name: "swift-collections", path: ".."),
-    .package(url: "https://github.com/apple/swift-collections-benchmark", from: "0.0.3"),
+    .package(url: "https://github.com/vanvoorden/swift-collections-benchmark.git", branch: "vanvoorden/measure-generic"),
   ],
   targets: [
     .target(
